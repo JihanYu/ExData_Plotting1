@@ -47,6 +47,7 @@ index.date <- ass_date(elec.data)
 
 
 ## make 4 plots in a screen
+png(file = "plot4.png")
 par(mfrow=c(2,2))
 ## plot (1,1) - line plot of Global active power
 plot(elec.data$Global_active_power, type="l", 
@@ -77,3 +78,4 @@ plot(elec.data$Global_reactive_power, type="l",
 	xlab="datetime", ylab="Global_reactive_power", xaxt="n")
 axis(side=1, at=index.date, labels=names(index.date))
 
+dev.off()
